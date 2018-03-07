@@ -25,7 +25,7 @@ void show2(const int nElements, string *array)
 	}
     }
 //----------------------------------------------------------------------------
-void show3(string (&array)[3]) //need () around the ref and correct number in []
+void show3(string (&array)[3]) //need () around the ref AND correct number in []
     {
     for (int i = 0; i < 3; i++)
 	{
