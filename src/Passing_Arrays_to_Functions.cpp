@@ -9,6 +9,8 @@
 #include <iostream>
 using namespace std;
 
+// PASSING AN ARRAY TO A FRUNCTION.....
+
 void show1(const int nElements, string array[]) //loose how many elem are in an array so (nElements, array)
     {
     for (int i = 0; i < nElements; i++)
@@ -34,11 +36,13 @@ void show3(string (&array)[3]) //need () around the ref AND correct number in []
     }
 //----------------------------------------------------------------------------
 
+//  RETURNING ARRAY FROM A FUNCTION.....
 string *getMemory()
     {
-    string *pMem = new string[3]; //remember to use delete! or make below (freeMemory) b/c used 'new'
+    string *pMem = new string[]; //creat a pointer that will hold the array
     cout << "Arrays created." << endl;
-    return pMem;
+    return pMem;// return that pointer that holds a new array inside of it
+    //remember to use delete! or make below (freeMemory) b/c used 'new'
     }
 
 void freeMemory(string *pFreeMe)
